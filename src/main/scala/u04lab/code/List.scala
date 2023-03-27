@@ -51,6 +51,7 @@ object List:
 
   def length(list: List[_]): Int = List.sum(List.map(list)(_ => 1))
 
+  @tailrec
   def find[A](list: List[A])(f: A => Boolean): Option[A] = list match
     case Cons(elem, rest) if f(elem) => Some(elem)
     case Cons(elem, rest) => find(rest)(f)
