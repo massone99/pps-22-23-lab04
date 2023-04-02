@@ -21,8 +21,7 @@ trait Board:
 			col <- 0 until size
 		do
 			result = cons(Pair(col, row), result)
-		List.reverse(result)
-
+		result
 	def minesPositions: List[Pair]
 
 	def hit(row: Int, col: Int): Result
