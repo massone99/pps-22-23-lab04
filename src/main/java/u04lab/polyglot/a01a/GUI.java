@@ -22,8 +22,8 @@ public class GUI extends JFrame {
         ActionListener al = (e)->{
             final JButton bt = (JButton)e.getSource();
             final Pair<Integer,Integer> p = buttons.get(bt);
-            //System.out.println("hit "+p);
-            final Logics.Result result = logics.hit(p.getY(), p.getX());
+            System.out.println("hit "+p);
+            final Logics.Result result = logics.hit(p.getX(), p.getY());
             if (result==Logics.Result.WON || result==Logics.Result.LOST){
                 System.out.println(result.name());
                 System.exit(0);

@@ -1,3 +1,6 @@
 package u04lab.polyglot.a01a
 
-@main def startGui(): Unit = new GUI(4, 2)
+import u04lab.code.*
+import Board.*
+
+@main def startGui(): Unit = new GUI(3, 2)

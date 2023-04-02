@@ -40,6 +40,7 @@ object List:
     case Cons(head, rest) => Cons(head, append(rest, right))
     case Nil() => right
 
+  @tailrec
   def foldLeft[A, B](list: List[A])(init: B)(f: (B, A) => B): B = list match
     case Nil() => init
     case Cons(h, t) => foldLeft(t)(f(init, h))(f)
